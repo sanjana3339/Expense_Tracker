@@ -1,10 +1,11 @@
+const { addIncome, getIncome, deleteIncome } = require("../controllers/income")
+
 const router=require("express").Router()
 
 
 
 
-router.get("/",(req,res)=>{
-    res.send("Hello World Again")
-})
-
+router.post("/add-income",addIncome)
+    .get("/get-income",getIncome)
+    .delete("/delete-income/:id",deleteIncome)
 module.exports=router
