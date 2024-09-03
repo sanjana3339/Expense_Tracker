@@ -1,0 +1,11 @@
+.Main-layout{
+    padding: 2rem;
+    height:100%;
+    display:flex;
+    gap: 2rem;
+}
+
+.Inner-layout{
+    padding:2rem 1.5rem;
+    width:100%;
+}
