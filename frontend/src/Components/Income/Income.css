@@ -1,0 +1,34 @@
+.Income {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.Income .income-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.Income .income-content .form-container {
+    flex: 1;
+}
+
+.Income .income-content .incomes {
+    flex: 1; 
+    max-height: 75vh; 
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+
+/* @media (max-width: 768px) {
+    .Income .income-content {
+        flex-direction: column;
+    }
+} */

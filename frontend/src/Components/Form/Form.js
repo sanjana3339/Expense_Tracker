@@ -23,12 +23,20 @@ function Form() {
     };
 
     const handleSubmit = e => {
+        console.log("Hello")
         e.preventDefault();
         addIncome(inputState);
+        setInputState({
+            title: '',
+            amount: '',
+            date: '',
+            category: '',
+            description: '',
+        });
     };
 
     return (
-        <div className="Form" onSubmit={handleSubmit}>
+        <form className="Form" onSubmit={handleSubmit}>
             <div className="input-control">
                 <input 
                     type="text" 
@@ -65,7 +73,8 @@ function Form() {
                     <option value="rent">Rent</option>
                     <option value="investments">Investments</option>
                     <option value="stocks">Stocks</option>
-                    <option value="bank">Bank Transfer</option>  
+                    <option value="bank">Bank Transfer</option>
+                    <option value="piggy">Pocket Money</option>  
                     <option value="family">Family</option>
                     <option value="friends">Friends</option>  
                     <option value="other">Other</option>  
@@ -87,7 +96,7 @@ function Form() {
                     <FaPlus /> Add Income
                 </button>
             </div>
-        </div>
+        </form>
     );
 }
 
