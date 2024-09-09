@@ -2,9 +2,9 @@
     padding: 0.3rem 1.5rem;
     width: 374px;
     height: 100%;
-    background: rgba(252, 246, 249, 0.78);
+    background: rgba(252, 246, 249, 0.8);
     border: 3px solid #FFFFFF;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
@@ -63,10 +63,10 @@
 }
 
 .Navigation .menu-items .bottom-nav{
-    margin-top: 140px;
+    margin-top: 210px;
 }
 
-.Navigation .active{
+.Navigation .menu-items .active{
     color: rgba(34, 34, 96, 1) ;
     i{
         color: rgba(34, 34, 96, 1) ;
