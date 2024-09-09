@@ -28,7 +28,7 @@ function Form() {
     };
 
     return (
-        <form className="Form" onSubmit={handleSubmit}>
+        <div className="Form" onSubmit={handleSubmit}>
             <div className="input-control">
                 <input 
                     type="text" 
@@ -87,7 +87,7 @@ function Form() {
                     <FaPlus /> Add Income
                 </button>
             </div>
-        </form>
+        </div>
     );
 }
 
