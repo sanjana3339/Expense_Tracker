@@ -44,21 +44,21 @@ export const GlobalProvider=({children})=>{
             .catch((err) =>{
                 setError(err.response.data.message)
             })
-        getExpenses()
+        getExpense()
     }
 
-    const getExpenses = async () => {
-        const response = await axios.get(`${BASE_URL}get-expenses`)
+    const getExpense = async () => {
+        const response = await axios.get(`${BASE_URL}get-expense`)
         setExpenses(response.data)
         console.log(response.data)
     }
 
     const deleteExpense = async (id) => {
         const res  = await axios.delete(`${BASE_URL}delete-expense/${id}`)
-        getExpenses()
+        getExpense()
     }
 
-    const totalExpenses = () => {
+    const totalExpense = () => {
         let totalIncome = 0;
         expenses.forEach((income) =>{
             totalIncome = totalIncome + income.amount
@@ -69,7 +69,7 @@ export const GlobalProvider=({children})=>{
 
 
     const totalBalance = () => {
-        return totalIncome() - totalExpenses()
+        return totalIncome() - totalExpense()
     }
 
     const transactionHistory = () => {
@@ -91,9 +91,9 @@ export const GlobalProvider=({children})=>{
             expenses,
             totalIncome,
             addExpense,
-            getExpenses,
+            getExpense,
             deleteExpense,
-            totalExpenses,
+            totalExpense,
             totalBalance,
             transactionHistory,
             error,

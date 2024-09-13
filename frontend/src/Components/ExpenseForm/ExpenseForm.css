@@ -1,11 +1,11 @@
-.Form {
+.Expense-Form {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.Form input, .Form textarea, .Form select {
+.Expense-Form input, .Expense-Form textarea, .Expense-Form select {
     font-family: inherit;
     font-size: inherit;
     outline: none;
@@ -19,36 +19,36 @@
     color: rgba(34, 34, 96, 0.9);
 }
 
-.Form input::placeholder, .Form textarea::placeholder {
+.Expense-Form input::placeholder, .Expense-Form textarea::placeholder {
     color: rgba(34, 34, 96, 0.4);
 }
 
-.Form .input-control {
+.Expense-Form .input-control {
     input {
         width: 100%;
     }
 }
 
-.Form .selects {
+.Expense-Form .selects {
     display: flex;
     justify-content: flex-start;
 }
 
-.Form .selects select {
+.Expense-Form .selects select {
     color: rgba(34, 34, 96, 0.6);
 }
 
-.Form .selects select:focus,
-.Form .selects select:active {
+.Expense-Form .selects select:focus,
+.Expense-Form .selects select:active {
     color: rgba(34, 34, 96, 1);
 }
 
-.Form .submit-btn {
+.Expense-Form .submit-btn {
     display: flex;
     justify-content: center;
 }
 
-.Form .submit-btn button {
+.Expense-Form .submit-btn button {
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
     background: rgb(253, 105, 72);
     color: #fff;
@@ -60,6 +60,6 @@
     transition: background 0.3s ease-in-out;
 }
 
-.Form .submit-btn button:hover {
+.Expense-Form .submit-btn button:hover {
     background: black;
 }

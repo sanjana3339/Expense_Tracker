@@ -1,7 +1,10 @@
 import { FaCalendar, FaComment, FaRupeeSign, FaTrash } from 'react-icons/fa';
 import { FaMoneyBill, FaPiggyBank, FaUniversity, FaWallet, FaBitcoin, FaUser, FaYoutube, FaBriefcase, FaDollarSign, FaCommentDollar, FaBuilding } from 'react-icons/fa';
+import { FaBook, FaShoppingCart, FaHeartbeat, FaTv, FaTshirt, FaPlane, FaUserFriends, FaHome, FaRegCircle, FaMoneyBillWave } from 'react-icons/fa';
 import './IncomeItem.css';
+import {dateFormat} from '../../Utils/dateFormat';
 import React from 'react';
+import { IoFastFood } from "react-icons/io5";
 
 function IncomeItem({
     id,
@@ -11,7 +14,6 @@ function IncomeItem({
     category,
     description,
     deleteItem,
-    indicatorColor,
     type
 }) {
   
@@ -48,25 +50,31 @@ function IncomeItem({
 
   const expenseCatIcon = () => {
     switch (category) {
-        // case 'education':
-        //     return book;
-        // case 'groceries':
-        //     return food;
-        // case 'health':
-        //     return medical;
-        // case 'subscriptions':
-        //     return tv;
-        // case 'takeaways':
-        //     return takeaway;
-        // case 'clothing':
-        //     return clothing;
-        // case 'travelling':
-        //     return freelance;
-        // case 'other':
-        //     return circle;
+        case 'education':
+          return <FaBook />;
+        case 'groceries':
+          return <FaShoppingCart />;
+        case 'health':
+          return <FaHeartbeat />;
+        case 'subscriptions':
+          return <FaTv />;
+        case 'clothing':
+          return <FaTshirt />;
+        case 'food':
+            return <IoFastFood />;
+        case 'travelling':
+          return <FaPlane />;
+        case 'friends':
+          return <FaUserFriends />;
+        case 'family':
+          return <FaHome />;
+        case 'loan':
+          return <FaMoneyBillWave />;
+        case 'other':
+          return <FaRegCircle />;
         default:
-            return ''
-    }
+          return '';
+        }
 }
 
   return (
@@ -79,12 +87,12 @@ function IncomeItem({
         <div className="inner-content">
             <div className="text">
                 <p><FaRupeeSign /> {amount}</p>
-                <p><FaCalendar /> {date}</p>
+                <p><FaCalendar /> {dateFormat(date)}</p>
                 <p><FaComment /> {description}</p>
             </div>
             <div className="btn-con">
                 <button onClick={() => deleteItem(id)}>
-                    <FaTrash />
+                    <FaTrash size={17} />
                 </button>
             </div>
         </div>

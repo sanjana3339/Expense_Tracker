@@ -1,13 +1,13 @@
-import './Form.css';
+import './ExpenseForm.css';
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useGlobalContext } from '../../Context/globalContext';
 import { FaPlus } from "react-icons/fa6";
 
-function Form() {
+function ExpenseForm() {
 
-    const { addIncome } = useGlobalContext();
+    const { addExpense } = useGlobalContext();
     const [inputState, setInputState] = useState({
         title: '',
         amount: '',
@@ -25,7 +25,7 @@ function Form() {
     const handleSubmit = e => {
         console.log("Hello")
         e.preventDefault();
-        addIncome(inputState);
+        addExpense(inputState);
         setInputState({
             title: '',
             amount: '',
@@ -36,13 +36,13 @@ function Form() {
     };
 
     return (
-        <form className="Form" onSubmit={handleSubmit}>
+        <form className="Expense-Form" onSubmit={handleSubmit}>
             <div className="input-control">
                 <input 
                     type="text" 
                     value={title}
                     name={'title'}
-                    placeholder="Income Title"
+                    placeholder="Expense Title"
                     onChange={handleInput('title')}
                 />
             </div>
@@ -51,7 +51,7 @@ function Form() {
                     value={amount}  
                     type="text" 
                     name={'amount'} 
-                    placeholder={'Income Amount'}
+                    placeholder={'Expense Amount'}
                     onChange={handleInput('amount')} 
                 />
             </div>
@@ -69,15 +69,17 @@ function Form() {
             <div className="selects input-control">
                 <select required value={category} name="category" id="category" onChange={handleInput('category')}>
                     <option value="" disabled>Select Option</option>
-                    <option value="salary">Salary</option>
-                    <option value="rent">Rent</option>
-                    <option value="investments">Investments</option>
-                    <option value="stocks">Stocks</option>
-                    <option value="bank">Bank Transfer</option>
-                    <option value="piggy">Pocket Money</option>  
-                    <option value="family">Family</option>
+                    <option value="education">Education</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="health">Health</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="clothing">Clothing</option>  
+                    <option value="food">Food</option>  
+                    <option value="travelling">Travelling</option>  
                     <option value="friends">Friends</option>  
-                    <option value="other">Other</option>  
+                    <option value="family">Family</option>  
+                    <option value="loan">Loan</option>  
+                    <option value="other">Other</option> 
                 </select>
             </div>
             <div className="input-control">
@@ -92,12 +94,12 @@ function Form() {
                 ></textarea>
             </div>
             <div className="submit-btn">
-                <button type="submit" className="add-income-btn">
-                    <FaPlus /> Add Income
+                <button type="submit" className="add-expense-btn">
+                    <FaPlus /> Add Expense
                 </button>
             </div>
         </form>
     );
 }
 
-export default Form;
+export default ExpenseForm;

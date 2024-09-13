@@ -3,10 +3,31 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    padding: 1rem;
+    padding: 0rem 1rem;
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+.Income .total-income {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FCF6F9;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 2rem;
+    gap: .5rem;
+}
+
+.Income .total-income span {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: rgb(3, 194, 3); 
+}
+
 
 .Income .income-content {
     display: flex;
@@ -19,16 +40,12 @@
 }
 
 .Income .income-content .incomes {
-    flex: 1; 
-    max-height: 75vh; 
+    flex: 1;
+    max-height: 60vh; 
     background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    overflow-y: auto; 
+    overflow-x: hidden; 
 }
-
-/* @media (max-width: 768px) {
-    .Income .income-content {
-        flex-direction: column;
-    }
-} */
