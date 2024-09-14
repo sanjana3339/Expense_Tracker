@@ -12,7 +12,7 @@ export const menuItems=[
         id:2,
         title:"View Transactions",
         icon:<GrTransaction />,
-        link:'/dashboard'
+        link:'/viewtransac'
     },
     {
         id:3,
