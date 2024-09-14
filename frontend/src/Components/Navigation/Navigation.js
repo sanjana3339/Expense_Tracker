@@ -1,10 +1,18 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import './Navigation.css';
 import useravatar from '../../Images/useravatar.png';
 import { menuItems } from '../../Utils/menuItems';
 import { FaSignOutAlt } from "react-icons/fa";
+import { useGlobalContext } from '../../Context/globalContext';
+
 
 function Navigation({active,setActive}) {
+    const {totalBalance} = useGlobalContext();
+    const [balance, setBalance] = useState(0);
+
+    useEffect(() => {
+        setBalance(totalBalance());
+    }, [totalBalance]);
     
   return (
     <div className="Navigation">
@@ -12,7 +20,7 @@ function Navigation({active,setActive}) {
             <img src={useravatar}/>
             <div className="text">
                     <h2>Krish</h2>
-                    <p>Your Money</p>
+                    <p>₹{balance}</p>
             </div>
         </div>
         <div>

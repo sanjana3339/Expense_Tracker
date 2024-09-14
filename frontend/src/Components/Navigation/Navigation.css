@@ -38,8 +38,9 @@
     font-size: 35px;
 }
 .Navigation .user-av p{
-    color: rgba(34, 34, 96, .6);
-    font-size: 20px;
+    color: rgba(34, 34, 96);
+    font-size: 23px;
+    padding-top: 8px;
 }
 
 .Navigation .menu-items{

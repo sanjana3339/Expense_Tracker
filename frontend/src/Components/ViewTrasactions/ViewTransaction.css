@@ -1,47 +1,64 @@
 .view-transac {
-    padding: 0rem 1rem;
+    padding: 0rem 1rem; /* Adjust for container padding */
+
+h1{
+    padding-bottom:1rem;
+
 }
 
-.History {
+.history-con {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-}
-
-.History h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary-color); /* Use your defined primary color */
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.history-item {
     background: #FCF6F9;
     border: 2px solid #FFFFFF;
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-    padding: 1rem;
     border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease;
+    gap: 1rem;
+    width: 100%;
+    color: #222260;
+    max-height: 500px; /* Set a max-height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.history-con h2 {
+    font-size: 1.8rem; /* Title font size */
+    color: black; /* Change this if you want a different color */
+    margin-bottom: 1rem;
+    text-align: center; /* Center the header */
+}
+
+.history-item {
+    background: #FCF6F9; /* Light background color */
+    border: 2px solid #FFFFFF; /* White border for a clean look */
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06); /* Light shadow */
+    padding: 1rem; /* Padding inside each item */
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Space out title and amount */
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 .history-item p {
-    font-size: 1.2rem;
-    color: var(--primary-text-color); /* Use any appropriate text color */
+    font-size: 1.2rem; /* Font size for the transaction text */
+    color: var(--primary-text-color); /* Use a primary text color or define one */
 }
 
 .history-item:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
 }
 
 .history-item p:first-child {
-    font-weight: bold;
+    font-weight:600; /* Make the title bold */
 }
 
 .history-item p:last-child {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Larger font size for the amount */
+}
 }

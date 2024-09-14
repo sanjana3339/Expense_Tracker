@@ -16,9 +16,8 @@ function ViewTransaction() {
     return (
         <div className="view-transac">
             <div className='Inner-layout'>
-                <h1>Transactions</h1>
+                <h1>Transaction History</h1>
                 <div className="history-con">
-                    <h2>Recent History</h2>
                     {history.map((item) => {
                         const { _id, title, amount, type } = item;
                         return (
