@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    .error{
+        color: red;
+    }
 }
 
 .Form input, .Form textarea, .Form select {
