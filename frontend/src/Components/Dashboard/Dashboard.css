@@ -3,7 +3,7 @@
     overflow-y: scroll;
     height: 95%;
     overflow-x: hidden;
-
+}
 
 h1 {
     margin-bottom: 1rem;
@@ -11,17 +11,17 @@ h1 {
 
 .stats-con {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on larger screens */
     gap: 2rem;
 }
 
 .chart-con {
-    grid-column: 1 / 4;
+    grid-column: 1 / 4; /* Span columns 1 to 3 */
     height: 400px;
 }
 
 .history-con {
-    grid-column: 4 / -1;
+    grid-column: 4 / -1; /* Span columns 4 to the end */
 }
 
 .history-con h2 {
@@ -60,10 +60,6 @@ h1 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
-
-    h2{
-        justify-content: center;
-    }
 }
 
 .income,
@@ -89,4 +85,23 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 1133px) {
+    .stats-con {
+        display: flex;
+        flex-direction: column; /* Stack the columns vertically */
+        gap: 2rem; /* Adjust gap between items */
+    }
+
+    .chart-con {
+        order: 2; /* Move the chart below the history */
+        width: 100%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .history-con {
+        order: 1; /* Move the history above the chart */
+        width: 100%; /* Full width */
+    }
 }
